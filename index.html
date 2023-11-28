@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UniAgenda</title>
+  <!-- Icon logo-->
+  <link rel="shortcut icon" href="./img/logoicon.ico" type="image/x-icon">
+  <!-- Meu CSS-->
+  <link rel="stylesheet" href="css/index.css" />
+  <!-- Bootstrap CSS-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+  <div style="margin-bottom: -50px;" class="text-center">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-lg-4">
+        <div class="subitem1">
+          <div id="logomarca">
+            <img src="https://i.postimg.cc/kgFMhyrY/uniagenda-logo.png" width="140" height="120" />
+          </div>
+          <div class="login">
+            <h2 align="center">LOGIN</h2>
+          </div>
+          </br>
+          <div class="usercredentials">
+            <form method="POST" action="">
+              <label class="tituloms">Matrícula</label>
+              </br>
+              <div class="matricula"><input type="text" name="Matrícula" placeholder="Matrícula" id="login"></div>
+              <label class="tituloms">Senha</label>
+              </br>
+              <div class="senha"><input type="password" name="Senha" placeholder="Senha" id="senha"></div>
+              <div class="erro" id="error">Senha incorreta!</div>
+              <div class="acesso"><button type="submit" class="botao" onclick="logar(); return false">Acessar</button>
+              </div>
+              <br>
+              <!-- Link para abrir modal para externos-->
+              <a class="ext" href="##" data-bs-toggle="modal" data-bs-target="#exampleModal">Sou externo e quero reservar uma sala</a>
+              <div class="footer">
+                <p>Desenvolvido por &copy;InovaTech.</p>
+              </div>
+              <!-- <div class="publicext"><button type="submit" class="externo">Sou externo e quero reservar uma sala</button></div> -->
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8 d-none d-lg-block">
+        <div class="subitem2">
+          <!--Carrossel 3 Img-->
+          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <!--Imagem 1 do carrossel-->
+                <img class="imgcarrossel" src="./img/BANNER 01.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <!--Imagem 2 do carrossel-->
+                <img class="imgcarrossel" src="./img/BANNER 02.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <!--Imagem 3 do carrossel-->
+                <img class="imgcarrossel" src="./img/BANNER 03.png" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Quero reservar uma sala.</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p style="text-align: justify; font-size: 15px;">Para solicitar o agendamento do auditório da Uninassau, é necessário entrar em contato com a instituição via email, fornecendo uma mensagem de apresentação juntamente com a data e hora desejadas para a reserva. <br><br>Contato: uninassau@uninassauaju.com.br <br><br> Aguardamos ansiosamente a confirmação do agendamento :)</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"></script>
+
+</body>
+<script src="index.js"></script>
+
+</html>

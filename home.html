@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UniAgenda</title>
+  <!-- Icon logo-->
+  <link rel="shortcut icon" href="./img/logoicon.ico" type="image/x-icon">
+  <!-- Meu CSS-->
+  <link rel="stylesheet" href="css/home.css" />
+  <!-- Bootstrap CSS-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="./home.js"></script>
+
+</head>
+
+<body>
+  <nav
+    class="fixed-top navbar navbar-expand-lg bg-body-tertiary shadownav p-2 mb-5 bg-body-tertiary rounded diminuirnav">
+    <div class="container">
+      <a class="navbar-brand" href="home.html"><img style="width: 80px;" src="img/logo.png" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link active" aria-current="page" href="index.html" id="nav">Sair</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="formAgendamento">
+    <div class="row">
+      <div class="col col-lg-6">
+        <h2>Agendamento</h2>
+        <br>
+        <!-- Select de Sala desejada-->
+        <div>
+          <div>
+            <h3>Disciplina para Agendamento: <br></h3>
+            <select class="form-select" id="disc" aria-label="Selecione a disciplina">
+              <option value="">Selecione uma opção</option>
+              <option value="Banco de Dados">Banco de Dados</option>
+              <option value="Front End FrameWorks">Front End Frameworks</option>
+              <option value="Back End">Back End</option>
+              <option value="Análise e Modelagem de Sistemas">Análise e Modelagem de Sistemas</option>
+              <option value="Engenharia de Software">Engenharia de Software</option>
+              <option value="Matemática Aplicada">Matemática Aplicada</option>
+            </select>
+
+            <h3>Salas Disponíveis: <br></h3>
+            <select class="form-select" id="sala" aria-label="Selecione a sala">
+              <option value="">Selecione uma opção</option>
+              <option value="Auditório">Auditório</option>
+              <option value="Metodologias Ativas 01">Metodologias Ativas 01</option>
+              <option value="Metodologias Ativas 02">Metodologias Ativas 02</option>
+            </select>
+            <h3>Data: <br></h3>
+            <input class="data" type="date" id="ddd">
+            <br>
+            <h3>Horários Disponíveis <br></h3>
+            <select class="form-select" id="horario" aria-label="Selecione o horário">
+              <option value="">Selecione uma opção</option>
+              <option value="9:00 - 10:00">9:00 - 10:00</option>
+              <option value="10:00 - 11:00">10:00 - 11:00</option>
+              <option value="11:00 - 12:00">11:00 - 12:00</option>
+              <option value="14:00 - 15:00">14:00 - 15:00</option>
+              <option value="15:00 - 16:00">15:00 - 16:00</option>
+              <option value="16:00 - 17:00">16:00 - 17:00</option>
+              <option value="18:00 - 17:00">17:00 - 18:00</option>
+              <option value="18:00 - 19:00">18:00 - 19:00</option>
+              <option value="19:00 - 20:00">19:00 - 20:00</option>
+              <option value="20:00 - 21:00">20:00 - 21:00</option>
+              <option value="21:00 - 22:00">20:00 - 21:00</option>
+            </select>
+            <br>
+
+            <button onclick="produto.salvar();" class="d-block mx-auto form-primary button">Solicitar
+              Agendamento</button>
+
+            <table id="tabela" class="hidden">
+              <tbody id="tbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col-lg-6 col-12 box-calendario">
+        <h3>Meus Agendamentos:</h3>
+        <div class="box-calendario2">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="imgbanner4">
+    <img src="img/BANNER 04.png" alt="">
+  </div>
+
+  <footer id="footer">
+    <p>Desenvolvido por InovaTECH &copy;2023</p>
+  </footer>
+
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hidden {
+    display: none;
+}
+
+#nav:hover{
+    color: red;
+
+}
+
+.formAgendamento{
+    width: 85%;
+    align-items: center;
+    margin: auto;
+    padding-top: 110px;
+}
+
+.formAgendamento h2{
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: -20px;
+    font-weight: 600;
+}
+
+.formAgendamento h3{
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 10px;
+
+}
+
+.formAgendamento select, input{
+    max-height: 30px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.shadownav{
+    box-shadow: rgba(0, 0, 0, 0.20) 0px 5px 15px;
+}
+
+/*Calendário*/
+
+.box-calendario {
+    background-color: #fff;
+    height: 340px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 15px;
+    overflow: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+.box-calendario2 div{
+    background-color: #fff;
+    margin: 0px 20px 0px 20px;
+    height: 150px;
+    padding-left: 10px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 15px;
+}
+
+.box-calendario h3{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 15px;
+    margin-top: -15px;
+    font-weight: 600;
+}
+
+.imgbanner4 img{
+    width: 100%;
+    margin-top: 10px;
+}
+
+/*INPUT DE DATA*/
+input[type="date"] {
+    padding: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+input[type="date"]:hover {
+    border-color: #677;
+}
+
+input[type="date"]:focus {
+    outline: none;
+    border-color: #ffff00;
+}
+/* FIM INPUT DE DATA*/
+
+/*BOTÃO AGENDAMENTO*/
+.form-primary.button {
+    padding: 10px;
+    background-color: rgb(0, 184, 0);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.form-primary.button:hover {
+    background-color: rgb(0, 161, 0);
+    cursor: pointer;
+}
+
+.formAgendamento footer{
+    width: 100% !important;
+}
+/*FOOTTER*/
+#footer {
+    background-color: #0670C8;
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+    padding: 30px;
+    position: relative;
+    width: 100%;
+}
+
+#footer p{
+    margin-top: 20px;
+}
+
+
+/*Tabela*/
+
+#tabela {
+    width: 95%;
+    background-color: #fff;
+    align-items: center;
+    margin:auto;
+    height: 120px;
+    padding-left: 10px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 15px;
+}
+
+.quadrado {
+    padding: 20px;
+}
+
+.textgreen{
+    font-size: 20px;
+    font-weight: 300;
+    color:rgb(57, 185, 57);
+}
+
+.textodata {
+    padding-right: 20px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.textohora {
+    text-align: right;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.button-column {
+    padding-right: 20px;
+    text-align: right;
+    vertical-align: middle;
+}
+
+.btn {
+    margin-bottom: 10px;
+ 
+}
+
