@@ -17,6 +17,58 @@ class Produto {
         }
     }
 
+    adicionar(produto) {
+        this.arrayProdutos.push(produto);
+    }
+
+    lerDados() {
+        let produto = {};
+
+        produto.id = this.id;
+        produto.disciplina = document.getElementById('disc').value;
+        produto.data = document.getElementById('ddd').value;
+        produto.sala = document.getElementById('sala').value;
+        produto.horario = document.getElementById('horario').value;
+
+        return produto;
+    }
+
+    validaCampos(produto) {
+        let msg = '';
+
+        if (produto.disciplina == '') {
+            msg += '- Informe a disciplina desejada\n';
+        }
+        if (produto.horario == '') {
+            msg += '- Informe o horário desejado\n';
+        }
+        if (produto.sala == '') {
+            msg += '- Informe a sala desejada \n';
+        }
+        if (produto.data == '') {
+            msg += '- Informe a data desejada \n';
+        }
+        
+        if (this.horarioJaAgendadoComMesmaSalaOuDisciplina(produto.data, produto.horario, produto.sala, produto.disciplina)) {
+            msg += '- Este horário já está agendado para a data selecionada com a mesma sala ou disciplina\n';
+        }
+
+        if (msg != '') {
+            alert(msg);
+            return false;
+        }
+
+        return true;
+    }
+
+    horarioJaAgendadoComMesmaSalaOuDisciplina(data, horario, sala, disciplina) {
+        return this.arrayProdutos.some(produto =>
+            produto.data === data &&
+            produto.horario === horario &&
+            (produto.sala === sala || produto.disciplina === disciplina)
+        );
+    }
+
     listaTabela() {
         let tbody = document.getElementById('tbody');
         let tabela = document.getElementById('tabela');
@@ -78,7 +130,7 @@ class Produto {
             }
         }
     }
-
+    
     cancelarItem(index) {
         const confirmado = window.confirm('Tem certeza que deseja cancelar este agendamento?');
     
@@ -103,58 +155,6 @@ class Produto {
         }
     }
 
-    adicionar(produto) {
-        this.arrayProdutos.push(produto);
-    }
-
-    lerDados() {
-        let produto = {}
-
-        produto.id = this.id;
-        produto.disciplina = document.getElementById('disc').value;
-        produto.data = document.getElementById('ddd').value;
-        produto.sala = document.getElementById('sala').value;
-        produto.horario = document.getElementById('horario').value;
-
-        return produto;
-    }
-
-    validaCampos(produto) {
-        let msg = '';
-
-        if (produto.disciplina == '') {
-            msg += '- Informe a disciplina desejada\n';
-        }
-        if (produto.horario == '') {
-            msg += '- Informe o horário desejado\n';
-        }
-        if (produto.sala == '') {
-            msg += '- Informe a sala desejada \n';
-        }
-        if (produto.data == '') {
-            msg += '- Informe a data desejada \n';
-        }
-
-        // Verificar se o horário já está agendado para a data selecionada com a mesma sala ou disciplina
-        if (this.horarioJaAgendadoComMesmaSalaOuDisciplina(produto.data, produto.horario, produto.sala, produto.disciplina)) {
-            msg += '- Este horário já está agendado para a data selecionada com a mesma sala ou disciplina\n';
-        }
-
-        if (msg != '') {
-            alert(msg);
-            return false;
-        }
-
-        return true;
-    }
-
-    horarioJaAgendadoComMesmaSalaOuDisciplina(data, horario, sala, disciplina) {
-        return this.arrayProdutos.some(produto =>
-            produto.data === data &&
-            produto.horario === horario &&
-            (produto.sala === sala || produto.disciplina === disciplina)
-        );
-    }
 }
 
 var produto = new Produto();
